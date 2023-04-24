@@ -250,7 +250,8 @@ elseif message == "!platform" then
             a.P = 1250
             a.Name = "Spin"
         
-     elseif message == "!unspin" then    game .Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Spin") then         game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Spin:Destroy()
+     elseif message == "!unspin" then    game .Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Spin") then         
+     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Spin:Destroy()
             end
         
 elseif string.find(tostring(message), '!wings') then
