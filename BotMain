@@ -55,13 +55,12 @@ messageDoneFiltering.OnClientEvent:Connect(function(message)
                 chat("VPNBOT_10.Operational = true")
             elseif game.Players.LocalPlayer.Name == alts.alt11 then
 	          chat("VPNBOT_11.Operational = true")
-            elseif game.Players.LocalPlayer.Name == alts.alt.12 then
+            elseif game.Players.LocalPlayer.Name == alts.alt12 then
                 chat ("VPNBOT_12.Operational = true")
         end
         elseif message == "!bring" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[_G.controller].Character.HumanoidRootPart.CFrame
-        elseif string.find(tostring(message), '!
-goto') then
+        elseif string.find(tostring(message), '!goto') then
             local String = message:gsub('!goto ', '')
             for i,v in pairs(game.Players:GetChildren()) do
                 if String == v.DisplayName then
@@ -250,7 +249,8 @@ elseif message == "!platform" then
             a.P = 1250
             a.Name = "Spin"
         
-     elseif message == "!unspin" then    game .Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Spin") then         
+     elseif message == "!unspin" then    
+         game .Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Spin")     
      game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Spin:Destroy()
             end
         
@@ -343,17 +343,16 @@ elseif string.find(tostring(message), '!wings') then
                     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players[String].Character.HumanoidRootPart.CFrame * CFrame.new(12, 12, 12)
                     game.Workspace.aaa.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame * CFrame.new(0, -3.6, 0)
                     task.wait()
-
+                    end
 	    elseif game.Players.LocalPlayer.Name == alts.alt12 then
                 _G.wings = true
                 while _G.wings == true do
                     game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players[String].Character.HumanoidRootPart.CFrame * CFrame.new(-12, 12, 12)
                     game.Workspace.aaa.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame * CFrame.new(0, -3.6, 0)
                     task.wait()
-
+                    end
                 end
-            end
-        elseif message == "!nowings" then
+            elseif message == "!nowings" then
             _G.wings = false
             for i,v in pairs(game.Workspace:GetChildren()) do
                 if v.Name == "aaa" then
